@@ -1,0 +1,14 @@
+<div *ngIf="!user">Please, log in to change location</div>
+<form [formGroup]="addForm" (ngSubmit)="addLocation()">
+  <label>Name</label>
+  <input type="text" formControlName="name">
+ 
+  <label>Country</label>
+  <input type="text" formControlName="country">
+  
+  <label>Public</label>
+  <input type="checkbox" formControlName="public">
+
+  <button type="submit">Add</button>
+</form>
+<button (click)="checkUserId()">click me</button>

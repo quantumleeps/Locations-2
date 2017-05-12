@@ -5,4 +5,6 @@ export interface Location extends CollectionObject {
     country: string;
     shortName?: string;
     region?: string;
+    owner?: string;
+    public: boolean;
 }
