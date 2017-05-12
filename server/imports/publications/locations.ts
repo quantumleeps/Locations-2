@@ -12,12 +12,26 @@ Meteor.publish('locations', function(locationId: string) {
 
 function buildQuery(locationId?: string): Object {
   const isAvailable = {
-    
+    $or: [{
+      // location is public
+      public: true
+    },
+    // or
+    { 
+      // current user is the owner
+      $and: [{
+        owner: this.userId 
+      }, {
+        owner: {
+          $exists: true
+        }
+      }]
+    }]
   };
 
   if (locationId) {
     return {
-      // only single party
+      // only single location
       $and: [{
           _id: locationId
         },
