@@ -25,6 +25,7 @@ export class LocationsFormComponent implements OnInit {
         this.addForm = this.formBuilder.group({
             name: ['', Validators.required],
             country: ['', Validators.required],
+            shortName: ['', Validators.required],
             public: [false]
         });
     }

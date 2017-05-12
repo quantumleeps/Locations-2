@@ -1,0 +1,13 @@
+<form *ngIf="location" (submit)="saveLocation()">
+  <label>Name</label>
+  <input type="text" [(ngModel)]="location.name" name="name">
+ 
+  <label>Country</label>
+  <input type="text" [(ngModel)]="location.country" name="country">
+ 
+  <label>Shortname</label>
+  <input type="text" [(ngModel)]="location.shortName" name="shortName">
+ 
+  <button type="submit">Save</button>
+  <a [routerLink]="['/configure']">Cancel</a>
+</form>

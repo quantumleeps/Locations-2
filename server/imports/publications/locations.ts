@@ -5,7 +5,7 @@ Meteor.publish('locations', function() {
   return Locations.find(buildQuery.call(this));
 });
 
-Meteor.publish('locations', function(locationId: string) {
+Meteor.publish('location', function(locationId: string) {
   return Locations.find(buildQuery.call(this, locationId));
 });
 

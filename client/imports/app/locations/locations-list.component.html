@@ -2,12 +2,9 @@
 <login-buttons></login-buttons>
 <ul>
     <li *ngFor="let location of locations | async">
-      <!--<a [routerLink]="['/party', party._id]">{{party.name}}</a>-->
-      <p>{{location.name}}</p>
+      <a [routerLink]="['/configure', location._id]">{{location.name}}</a>
       <p>{{location.country}}</p>
+      <p>{{location.shortName}}</p>
       <button (click)="removeLocation(location)">X</button>
     </li>
   </ul>
-
-
-  testing
