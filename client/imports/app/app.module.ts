@@ -9,6 +9,7 @@ import { routes, ROUTES_PROVIDERS } from './app.routes';
 import { PARTIES_DECLARATIONS } from './parties';
 import { HOME_DECLARATIONS } from './home';
 import { LOCATIONS_DECLARATIONS } from './locations';
+import { DATA_GROUPS_DECLARATIONS } from './data-groups';
 
 @NgModule({
     imports: [
@@ -22,7 +23,8 @@ import { LOCATIONS_DECLARATIONS } from './locations';
         AppComponent,
         ...PARTIES_DECLARATIONS,
         ...HOME_DECLARATIONS,
-        ...LOCATIONS_DECLARATIONS
+        ...LOCATIONS_DECLARATIONS,
+        ...DATA_GROUPS_DECLARATIONS
     ],
     providers: [
         ...ROUTES_PROVIDERS

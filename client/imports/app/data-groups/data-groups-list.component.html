@@ -1,0 +1,8 @@
+<data-groups-form [curLocation]="curLocation"></data-groups-form>
+<login-buttons></login-buttons>
+<ul>
+    <li *ngFor="let dataGroup of dataGroups | async">
+      <a [routerLink]="['./data-group', dataGroup._id]">{{dataGroup.name}}</a>
+      <button (click)="removeDataGroup(dataGroup)">X</button>
+    </li>
+  </ul>

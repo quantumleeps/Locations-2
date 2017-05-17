@@ -1,0 +1,7 @@
+<div *ngIf="!user">Please, log in to change data group</div>
+<form [formGroup]="addForm" (ngSubmit)="addDataGroup()">
+  <label>Name</label>
+  <input type="text" formControlName="name">
+
+  <button type="submit">Add</button>
+</form>

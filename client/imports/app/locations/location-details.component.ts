@@ -8,6 +8,7 @@ import 'rxjs/add/operator/map';
 
 import { Locations } from '../../../../both/collections/locations.collection';
 import { Location } from '../../../../both/models/location.model';
+import { DataGroupsListComponent } from '../data-groups/data-groups-list.component';
 
 import template from './location-details.component.html';
 
